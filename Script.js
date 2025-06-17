@@ -1,24 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-  const icon = darkModeToggle.querySelector('i');
+const cursor = document.querySelector(".cursor");
 
-  // Cek preferensi dark mode
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    body.classList.add('dark-mode');
-    icon.classList.replace('bx-moon', 'bx-sun');
-  }
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
 
-  // Toggle dark mode
-  darkModeToggle.addEventListener('click', function() {
-    body.classList.toggle('dark-mode');
-    
-    if (body.classList.contains('dark-mode')) {
-      localStorage.setItem('darkMode', 'enabled');
-      icon.classList.replace('bx-moon', 'bx-sun');
-    } else {
-      localStorage.setItem('darkMode', 'disabled');
-      icon.classList.replace('bx-sun', 'bx-moon');
-    }
-  });
+document.addEventListener("click", (e) => {
+  const ripple = document.createElement("span");
+  ripple.className = "ripple";
+  ripple.style.left = e.clientX + "px";
+  ripple.style.top = e.clientY + "px";
+  document.body.appendChild(ripple);
+  setTimeout(() => ripple.remove(), 500);
 });
