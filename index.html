@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OvannDev</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OvannDev Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Hi, saya Ovann 👋</h1>
-    <p>Programmer | Fintech Enthusiast | Future Ai Expert</p>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+
+  <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-10 shadow-lg">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-2 animate-bounce">👋 Halo, saya Ovann</h1>
+      <p class="text-lg">Programmer • Blockchain Enthusiast • Fintech Learner</p>
+    </div>
   </header>
 
-  <section>
-    <h2>Project Saya</h2>
-    <ul>
-      <li><a href="#">✳️ Nama Project 1</a></li>
-      <li><a href="#">✳️ Nama Project 2</a></li>
-    </ul>
-  </section>
+  <main class="max-w-3xl mx-auto p-6">
+    
+    <section class="my-12">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">📌 Tentang Saya</h2>
+      <p class="text-gray-700">
+        Saya adalah mahasiswa Teknik Informatika yang punya passion besar di dunia blockchain, AI, dan fintech. Saat ini sedang membangun portofolio sambil terus belajar & ngulik teknologi terbaru.
+      </p>
+    </section>
 
-  <footer>
-    <p>© 2025 OvannDev. Dibuat dengan 🕊️ di GitHub Pages.</p>
+    <section class="my-12">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">🚀 Proyek Unggulan</h2>
+      <ul class="space-y-4">
+        <li class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">
+          <h3 class="font-bold">Project Kripto Tracker</h3>
+          <p>Website sederhana untuk memantau harga kripto real-time (menggunakan API CoinGecko).</p>
+        </li>
+        <li class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">
+          <h3 class="font-bold">Fintech Web Mockup</h3>
+          <p>UI mockup landing page startup fintech (HTML + Tailwind).</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="my-12">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">📬 Kontak</h2>
+      <p>Yuk connect via <a href="https://www.instagram.com/ovanndev" class="text-blue-500 underline">Instagram @ovanndev</a> atau email ke <span class="font-mono bg-yellow-100 px-1">dev.ovann@gmail.com</span></p>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm py-4 bg-gray-200 mt-10">
+    Dibuat dengan ❤️ oleh Ovann • 2025
   </footer>
+
 </body>
 </html>
