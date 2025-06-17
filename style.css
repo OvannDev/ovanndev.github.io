@@ -51,6 +51,15 @@ body.dark-mode {
 }  
 
 /* Sosial Media */  
+.social-links a .bx-link-alt {  /* Icon NGL */
+  color: #FF5733;  /* Warna oranye */
+}
+.social-links a .bxl-tiktok {  /* TikTok */
+  color: #000000;  /* Hitam */
+}
+.social-links a .bxl-shopify {  /* Marketplace */
+  color: #5C6BC0;  /* Ungu */
+}
 .social-links {  
   margin-top: 1.5rem;  
 }  
