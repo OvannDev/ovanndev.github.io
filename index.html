@@ -1,94 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ovann Dev</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #111827;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      min-height: 100vh;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    .typewriter {
-      font-size: 26px;
-      overflow: hidden;
-      border-right: .15em solid orange;
-      white-space: nowrap;
-      margin-bottom: 30px;
-      letter-spacing: .1em;
-      animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: orange; }
-    }
-
-    .profile {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #60a5fa;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    .social-icons a {
-      margin: 0 15px;
-      color: #60a5fa;
-      font-size: 28px;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      transform: scale(1.3);
-      color: #3b82f6;
-    }
-
-    h1 {
-      font-size: 2em;
-      margin: 10px 0 5px;
-    }
-
-    p {
-      font-size: 1.1em;
-      color: #d1d5db;
-    }
-  </style>
 </head>
 <body>
+  <header class="hero">
+    <h1 class="typewriter">Selamat datang di dunia Ovann</h1>
+    <img src="img/foto-ovann.jpg" alt="Ovann" class="profile-img" />
+    <p>Programmer | Blockchain Enthusiast | AI Explorer</p>
+    <div class="social">
+      <a href="https://github.com/ovanndev" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/ovann" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/ovann" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </header>
 
-  <div class="typewriter">Selamat datang di website Ovann Dev</div>
+  <section class="about">
+    <h2>Tentang Saya</h2>
+    <p>Halo! Saya Ovann, seorang mahasiswa teknik informatika yang sedang mendalami dunia blockchain, AI, dan teknologi masa depan. Saya percaya bahwa masa depan dimulai dari baris kode yang ditulis hari ini.</p>
+  </section>
 
-  <!-- Ganti URL foto profil ini dengan milik kamu -->
-  <img src="https://www.instagram.com/bullynerusdear?igsh=Y2l6M2Jrc3p5YWto" alt="Foto Ovann" class="profile">
+  <section class="portfolio">
+    <h2>Proyek Saya</h2>
+    <div class="card">
+      <h3>Project NFT Gallery</h3>
+      <p>Gallery web untuk koleksi NFT yang terhubung dengan smart contract Ethereum.</p>
+    </div>
+    <div class="card">
+      <h3>Crypto Tracker</h3>
+      <p>Aplikasi pelacak harga kripto real-time menggunakan API CoinGecko.</p>
+    </div>
+  </section>
 
-  <h1>Ovann Dev</h1>
-  <p>Programmer | Blockchain Enthusiast | AI Explorer</p>
-
-  <div class="social-icons" style="margin-top: 20px;">
-    <a href="https://github.com/ovanndev" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/ovann" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://instagram.com/ovann" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
-
+  <footer>
+    <p>&copy; 2025 Ovann Dev. All rights reserved.</p>
+  </footer>
 </body>
 </html>
