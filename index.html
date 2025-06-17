@@ -1,35 +1,57 @@
-<!DOCTYPE html>  
-<html lang="id">  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Personal website</title>  
-  <link rel="stylesheet" href="style.css">  
-  <!-- Boxicons untuk icon sosial media -->  
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
-</head>  
-<body class="light-mode">  
-  <!-- Tombol Toggle Dark Mode -->  
-  <button id="darkModeToggle" class="toggle-btn">  
-    <i class='bx bx-moon'></i>  
-  </button>  
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor"></div>
+  <header>
+    <h1>Halo, saya [Nama Kamu]</h1>
+    <p>Selamat datang di website pribadi saya</p>
+  </header>
 
-  <!-- Profil Section -->  
-  <section class="profile">  
-    <img src="assets/images/profile.jpg" alt="Foto Profil" class="profile-img">  
-    <h1>Novan setiadi</h1>  
-    <p>Web Developer</p>  
+  <section id="profil">
+    <img src="profile.jpg" alt="Foto Profil" class="profile-image" />
+    <h2>Tentang Saya</h2>
+    <p>Deskripsi singkat tentang siapa kamu, latar belakang, dan minat.</p>
+  </section>
 
-    <!-- Sosial Media -->  
-<div class="social-links">
-  <a href="https://ovanndev.github.io/" target="_blank"><i class='bx bxl-github'></i></a>
-  <a href="https://www.linkedin.com/in/novan-setiadi-838283331?trk=contact-info" target="_blank"><i class='bx bxl-linkedin'></i></a>
-  <a href="https://ngl.link/ovann1" target="_blank"><i class='bx bx-link-alt'></i></a>  <!-- NGL (Alternatif) -->
-  <a href="https://www.tiktok.com/@vanned1tz?_t=8r8X26AV6Go&_r=1" target="_blank"><i class='bx bxl-tiktok'></i></a>   <!-- TikTok -->
-  <a href="https://lynk.id/novansetiadi03" target="_blank"><i class='bx bxl-shopify'></i></a>  <!-- Marketplace -->
-</div>
-  </section>  
+  <section id="skill">
+    <h2>Keahlian</h2>
+    <ul class="skill-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>UI/UX</li>
+    </ul>
+  </section>
 
-  <script src="script.js"></script>  
-</body>  
-</html>  
+  <section id="sertifikat">
+    <h2>Sertifikat</h2>
+    <p>Sertifikat dari pelatihan atau pendidikan, bisa dilampirkan sebagai gambar/link.</p>
+  </section>
+
+  <section id="insight">
+    <h2>Insight</h2>
+    <p>Pemikiran pribadi atau kutipan favorit.</p>
+  </section>
+
+  <section id="media">
+    <h2>Hubungi Saya</h2>
+    <div class="sosial">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    <a href="settings.html">Pengaturan</a>
+  </footer>
+
+  <script src="cursor.js"></script>
+</body>
+</html>
