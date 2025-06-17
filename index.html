@@ -20,6 +20,41 @@
 </script>
 
   <!-- Header -->
+  <style>
+  body.light {
+    background-color: white;
+    color: black;
+  }
+
+  body.dark {
+    background-color: #121212;
+    color: white;
+  }
+
+  #settings {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+
+  /* Portrait Layout */
+  @media (orientation: portrait) {
+    .container {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  /* Landscape Layout */
+  @media (orientation: landscape) {
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+</style>
   <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-10 shadow-lg relative">
     <div class="text-center" data-aos="zoom-in">
       <h1 class="text-4xl font-bold mb-2 animate-bounce">Halo, saya Ovann</h1>
