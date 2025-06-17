@@ -1,48 +1,278 @@
-<!DOCTYPE html>
-<div class="hero">
-  <img src="assets/img/ovann.jpg" alt="Foto Profil Ovann" class="profile-img" />
-  
-  <div class="typewriter-container">
-    <h1 class="typewriter">Selamat datang di dunia Ovann</h1>
-  </div>
-  
-  <p>Programmer | Blockchain Enthusiast | AI Explorer</p>
-  <div class="social">
-    <a href="https://github.com/ovanndev" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.instagram.com/ovann.id" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
+``html
+    :root {
+        --bg-light: #ffffff;
+        --text-light: #333333;
+        --accent-light: #e5e5e5;
+        --bg-dark: #121212;
+        --text-dark: #f5f5f5;
+        --accent-dark: #333333;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .dark {
+        --bg-color: var(--bg-dark);
+        --text-color: var(--text-dark);
+        --accent-color: var(--accent-dark);
+    }
+    
+    .light {
+        --bg-color: var(--bg-light);
+        --text-color: var(--text-light);
+        --accent-color: var(--accent-light);
+    }
+    
+    .skill-bar {
+        height: 8px;
+        border-radius: 4px;
+        background-color: var(--accent-color);
+        position: relative;
+    }
+    
+    .skill-progress {
+        height: 100%;
+        border-radius: 4px;
+        background-color: #666;
+    }
+    
+    .certificate-card {
+        transition: transform 0.3s ease;
+    }
+    
+    .certificate-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .settings-panel {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .settings-panel.open {
+        right: 0;
+    }
+    
+    .profile-image {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto;
+        border: 3px solid var(--accent-color);
+    }
+    
+    .social-icon {
+        transition: transform 0.3s ease;
+    }
+    
+    .social-icon:hover {
+        transform: translateY(-3px);
+    }
+</style>
+        <div class="flex space-x-4">
+            <a href="#" class="social-icon text-2xl hover:text-gray-600"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon text-2xl hover:text-gray-600"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon text-2xl hover:text-gray-600"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon text-2xl hover:text-gray-600"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon text-2xl hover:text-gray-600"><i class="fab fa-youtube"></i></a>
+            <button id="settings-toggle" class="ml-2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                <i class="fas fa-cog text-xl"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- About Me -->
+    <section class="mb-12 p-6 rounded-lg bg-accent-color">
+        <h2 class="text-2xl font-bold mb-4">Tentang Saya</h2>
+        <p class="mb-4">
+            Halo! Saya adalah seorang profesional yang bersemangat dalam bidang pengembangan web dan desain. 
+            Dengan pengalaman beberapa tahun di industri ini, saya telah mengembangkan berbagai keterampilan 
+            yang memungkinkan saya untuk menciptakan solusi digital yang menarik dan fungsional.
+        </p>
+        <p>
+            Saya percaya bahwa desain yang baik harus menggabungkan estetika dan fungsionalitas. 
+            Saya selalu berusaha untuk membuat produk yang tidak hanya terlihat bagus tetapi juga 
+            memberikan pengalaman pengguna yang luar biasa.
+        </p>
+    </section>
+    
+    <!-- Skills -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Keterampilan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                    <span class="font-medium">HTML & CSS</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                    <span class="font-medium">JavaScript</span>
+                    <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                    <span class="font-medium">UI/UX Design</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                    <span class="font-medium">React</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                    <span class="font-medium">Node.js</span>
+                    <span>70%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                    <span class="font-medium">Python</span>
+                    <span>65%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certificates -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Sertifikat</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="certificate-card p-4 rounded-lg border border-gray-300 dark:border-gray-700">
+                <h3 class="font-semibold mb-2">Web Development Fundamentals</h3>
+                <p class="text-sm opacity-75 mb-2">Udemy</p>
+                <p class="text-xs opacity-75">Diperoleh: Januari 2022</p>
+            </div>
+            
+            <div class="certificate-card p-4 rounded-lg border border-gray-300 dark:border-gray-700">
+                <h3 class="font-semibold mb-2">Advanced JavaScript</h3>
+                <p class="text-sm opacity-75 mb-2">Coursera</p>
+                <p class="text-xs opacity-75">Diperoleh: Maret 2022</p>
+            </div>
+            
+            <div class="certificate-card p-4 rounded-lg border border-gray-300 dark:border-gray-700">
+                <h3 class="font-semibold mb-2">UI/UX Design Principles</h3>
+                <p class="text-sm opacity-75 mb-2">Google</p>
+                <p class="text-xs opacity-75">Diperoleh: Juni 2022</p>
+            </div>
+            
+            <div class="certificate-card p-4 rounded-lg border border-gray-300 dark:border-gray-700">
+                <h3 class="font-semibold mb-2">React Developer</h3>
+                <p class="text-sm opacity-75 mb-2">Meta</p>
+                <p class="text-xs opacity-75">Diperoleh: September 2022</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-center py-6 border-t border-gray-300 dark:border-gray-700">
+        <p class="text-sm opacity-75">© 2023 Personal Blog. Dibuat dengan ❤️</p>
+    </footer>
 </div>
-  </header>
 
-  <section class="about">
-    <h2>Tentang Saya</h2>
-    <p>Halo! Saya Ovann, seorang mahasiswa teknik informatika yang sedang mendalami dunia blockchain, AI, dan teknologi masa depan. Saya percaya bahwa masa depan dimulai dari baris kode yang ditulis hari ini.</p>
-  </section>
-
-  <section class="portfolio">
-    <h2>Proyek Saya</h2>
-    <div class="card">
-      <h3>Project NFT Gallery</h3>
-      <p>Gallery web untuk koleksi NFT yang terhubung dengan smart contract Ethereum.</p>
+<!-- Settings Panel -->
+<div class="settings-panel bg-color shadow-lg p-6">
+    <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl font-bold">Pengaturan</h3>
+        <button id="close-settings" class="text-xl">&times;</button>
     </div>
-    <div class="card">
-      <h3>Crypto Tracker</h3>
-      <p>Aplikasi pelacak harga kripto real-time menggunakan API CoinGecko.</p>
+    
+    <div class="mb-4">
+        <h4 class="font-medium mb-2">Mode Tampilan</h4>
+        <div class="flex items-center">
+            <span class="mr-2"><i class="fas fa-sun"></i></span>
+            <label class="switch relative inline-block w-12 h-6">
+                <input type="checkbox" id="theme-toggle" class="opacity-0 w-0 h-0">
+                <span class="slider absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-1 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
+            </label>
+            <span class="ml-2"><i class="fas fa-moon"></i></span>
+        </div>
     </div>
-  </section>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Ovann Dev. All rights reserved.</p>
-  </footer>
 <script>
-  document.addEventListener('mousemove', function(e) {
-    const trail = document.createElement('div');
-    trail.className = 'cursor-trail';
-    trail.style.left = `${e.pageX}px`;
-    trail.style.top = `${e.pageY}px`;
-    document.body.appendChild(trail);
-    setTimeout(() => trail.remove(), 500);
-  });
+    // Theme toggle functionality
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const settingsToggle = document.getElementById('settings-toggle');
+    const closeSettings = document.getElementById('close-settings');
+    const settingsPanel = document.querySelector('.settings-panel');
+    
+    // Check for saved theme preference or use default
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.classList.add(savedTheme);
+    themeToggle.checked = savedTheme === 'dark';
+    
+    // Update slider position based on theme
+    updateSliderPosition();
+    
+    // Theme toggle event
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            body.classList.remove('light');
+            body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.remove('dark');
+            body.classList.add('light');
+            localStorage.setItem('theme', 'light');
+        }
+        updateSliderPosition();
+    });
+    
+    // Settings panel toggle
+    settingsToggle.addEventListener('click', () => {
+        settingsPanel.classList.add('open');
+    });
+    
+    closeSettings.addEventListener('click', () => {
+        settingsPanel.classList.remove('open');
+    });
+    
+    // Update slider position based on theme
+    function updateSliderPosition() {
+        const slider = document.querySelector('.slider');
+        if (themeToggle.checked) {
+            slider.classList.add('before:translate-x-6');
+        } else {
+            slider.classList.remove('before:translate-x-6');
+        }
+    }
 </script>
-</body>
-</html>
