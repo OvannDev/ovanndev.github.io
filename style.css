@@ -10,14 +10,43 @@ body {
   padding: 40px 20px;
   background: #f3f4f6;
 }
+.typewriter-container {
+  margin-top: 20px;
+}
 
 .typewriter {
-  font-size: 28px;
-  border-right: 2px solid #000000;
+  font-size: 24px;
   white-space: nowrap;
   overflow: hidden;
+  border-right: 2px solid #000;
+  width: 100%;
   animation: typing 3s steps(30), blink 0.5s step-end infinite alternate;
-  color: #111111;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Efek cursor mengikuti */
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #6b7280;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: trailFade 0.5s ease-out forwards;
+}
+
+@keyframes trailFade {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(2); }
 }
 
 @keyframes typing {
